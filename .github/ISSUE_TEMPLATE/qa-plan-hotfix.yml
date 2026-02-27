@@ -1,0 +1,36 @@
+name: QA Plan for Hotfix
+description: Create a QA plan for hotfix changes.
+title: "QA Plan – <PR_TITLE>"
+labels: qa
+type: qa
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to create a QA Plan when a hotfix is about to be deployed. The scope of this QA Plan should be focused on the issues fixed in the hotfix.
+
+  - type: checkboxes
+    id: pre-tasks
+    attributes:
+      label: Pre-Tasks
+      description: "Confirm the following before proceeding:"
+      options:
+        - label: All unit tests passed.
+          required: true
+        - label: All themes conform to the root style guide, excluding documented exceptions.
+          required: true
+        - label: Compiled PR reviewed and approved by required reviewers on UAT.
+          required: true
+        - label: Regression testing has been completed on all components that are affected by this change.
+          required: true
+
+  - type: textarea
+    id: extended
+    attributes:
+      label: Extended Functional Testing
+      description: |
+        Extended functional testing typically occurs in the UAT environment and should involve both developers and at least one product owner. 
+        The goal is to validate changes in the hotfix.
+      placeholder: |
+        Verify that the accordions now expand and collapse as expected.
