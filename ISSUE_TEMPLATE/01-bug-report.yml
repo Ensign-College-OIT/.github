@@ -1,0 +1,73 @@
+name: Bug Report
+description: Help us identify and fix bugs by filling out the details below.
+title: "[BUG]: <short description>"
+labels: ["bug", "triage"]
+type: "bug"
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please provide as much detail as possible. It helps us to be able to replicate the issue.
+
+  - type: input
+    id: description
+    attributes:
+      label: Brief Description
+      description: A clear description of the issue
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: Give a clear description on what you expected happen
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: Describe what happened instead, including error messages and codes.
+
+  - type: textarea
+    id: repo
+    attributes:
+      label: To Reproduce
+      description: "Steps to reproduce the behavior:"
+      placeholder: |
+        1. Go to...
+        2. Click on...
+        3. See the error...
+      value: |
+        1. 
+        2. 
+        3. 
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: If applicable, add any screenshots to help show what's happening.
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Include OS and browser details
+      placeholder: "e.g., Windows 11, Chrome 120"
+
+  - type: textarea
+    id: other
+    attributes:
+      label: Additional Information
+      description: Add any additional information or context about the issue.
+
+  - type: checkboxes
+    id: qa-issue
+    attributes:
+      label: Is this an issue from QA?
+      description: If this issue arose because of QA testing, link this issue to the QA Plan.
+      options:
+        - label: I've attached this issue to the QA Plan.
+        - label: This issue isn't from a QA.
+    validations:
+      required: true
