@@ -1,0 +1,96 @@
+name: Hotfix Request
+description: Track an urgent production fix that requires expedited review and release.
+title: "[HOTFIX]: "
+labels:
+  - triage
+  - hotfix
+type: bug
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Hotfix Request
+        Use this template for urgent fixes that must be deployed outside the normal release cycle. Ensure all required fields are completed before requesting review or deployment.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Short Summary
+      description: Short description of the issue being fixed.
+      placeholder: Null pointer error in calendar rendering.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: Urgency Level
+      description: Select the urgency
+      options:
+        - P1 - Significant user impact/outage
+        - P2 - Major feature broken
+        - P3 - Degraded functionality
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: User Impact
+      description: Describe who is impacted and how.
+      placeholder: |
+        - Users unable to authenticate
+        - Private content is unreachable
+    validations:
+      required: true
+
+  - type: input
+    id: detected_at
+    attributes:
+      label: Issue Detected At
+      description: Timestamp preferred, but a date/time will do.
+      placeholder: "2026-02-26T14:32:00-07:00"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem_description
+    attributes:
+      label: Problem Description
+      description: What is incorrect or broken?
+      placeholder: |
+        Describe the production issue this hotfix resolves.
+        Include URLs, content IDs, or stack traces if relevant.
+    validations:
+      required: true
+
+  - type: textarea
+    id: root_cause
+    attributes:
+      label: Root Cause (if known)
+      description: Brief explanation of the underlying cause
+      placeholder: |
+        Recent refactor broke accordion expansion JavaScript
+
+  - type: textarea
+    id: proposed_fix
+    attributes:
+      label: Proposed Fix
+      description: Describe exactly what will change.
+      placeholder: |
+        What code/config will be modified?
+        Is this additive, override-based, or direct modification?
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: follow_up
+    attributes:
+      label: Follow-Up Actions (Post-Hotfix)
+      description: Tasks required after deployment.
+      options:
+        - label: Add regression test
+        - label: Schedule refactor in next sprint
+        - label: Relevant stakeholders notified
+        - label: Document root cause analysis
