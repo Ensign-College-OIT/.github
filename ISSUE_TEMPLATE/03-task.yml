@@ -1,0 +1,97 @@
+name: Task Request
+description: A regular task (implementation, docs, chore)
+title: "[Task]: <task name>"
+labels:
+  - triage
+type: task
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Task
+        Use this form for routine work items (implementation, docs, maintenance, etc.). Provide a clear summary, acceptance criteria, and due date if applicable.
+
+  - type: input
+    id: short-summary
+    attributes:
+      label: Short Summary
+      description: A summary on the task.
+      placeholder: Add pagination to reports
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A detailed description of the work to be done. Include technical notes, links, or constraints.
+      placeholder: |
+        Describe the task, background, design constraints, and any implementation notes.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Clear, testable conditions that must be true for this task to be considered complete
+      placeholder: |
+        - API returns paginated results with `page` and `per-page`
+        - UI shows next/previous and total pages
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: Priority for scheduling and triage
+      options:
+        - P0 – Urgent
+        - P1 – High
+        - P2 – Medium
+        - P3 – Low
+
+  - type: input
+    id: owner
+    attributes:
+      label: Owner (team/person)
+      description: Who is responsible for delivering this task
+      placeholder: "@frontend-team or alice"
+
+  - type: input
+    id: due-date
+    attributes:
+      label: Due Date
+      description: Optional target date (YYYY-MM-DD) for delivery.
+      placeholder: "2014-11-15"
+
+  - type: dropdown
+    id: estimate
+    attributes:
+      label: Effort Estimate
+      description: Rough size estimate to help with planning.
+      options:
+        - High
+        - Medium
+        - Low
+        - Need to scope
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies / Related Work
+      description: Link related issues, PRs, or external dependencies.
+      placeholder: |
+        - Related issue: #123
+        - Blocked by PR: https://github.com/org/repo/456
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context / attachments
+      description: Add links to designs, screenshots, logs, or documents.
+      placeholder: |
+        - Design: https://www.figma.com/...
+        - Specs: docs/task-spec.md
