@@ -1,4 +1,4 @@
-# Organization Configuration Repository
+# Ensign College Organization Configuration Repository
 
 This repository contains shared configuration, templates, and community health files
 that apply across repositories in this GitHub organization.
