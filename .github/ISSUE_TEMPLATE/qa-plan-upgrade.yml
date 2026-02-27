@@ -1,0 +1,66 @@
+name: QA Plan for Upgrades
+description: Create a QA plan for major upgrades or code changes.
+title: "QA Plan – <PR_TITLE>"
+labels: qa
+type: qa
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to create a QA Plan for major code changes or Brightspot upgrades. QA Plans define the scope of testing and provide a structured way to track QA progress.
+
+  - type: checkboxes
+    id: pre-tasks
+    attributes:
+      label: Pre-Tasks
+      description: "Confirm the following before proceeding:"
+      options:
+        - label: All unit tests passed.
+          required: true
+        - label: All themes conform to the root style guide, excluding documented exceptions.
+          required: true
+        - label: Compiled PR reviewed and approved by required reviewers on UAT.
+          required: true
+
+  - type: textarea
+    id: extended
+    attributes:
+      label: Extended Functional Testing
+      description: |
+        Extended functional testing typically occurs in the UAT environment and should involve both developers and at least one product owner. 
+        The goal is to validate changes in an environment that closely mirrors Production. Invite users who were not directly involved in development or early testing to ensure unbiased feedback.
+
+        Document detailed testing steps above. Create child issues for any defects identified during testing.
+      placeholder: |
+        The SAML authentication system has changed due to the addition of per-site and per-page authorization.
+
+        Two UAT sites currently use this functionality:
+        - Intranet: Authentication is required site-wide; all authenticated users have access.
+        - Policy Website: Public by default, with authentication required for restricted areas.
+
+        Testing steps:
+        1. Navigate to the UAT intranet.
+        2. Confirm that authentication is required or that the authenticated homepage is displayed.
+
+  - type: checkboxes
+    id: regression
+    attributes:
+      label: Regression Testing
+      description: "The following components have historically been impacted by past changes and must be verified:"
+      options:
+        - label: Accordion lists
+        - label: Card - image on top promos pointing to videos
+        - label: Carousels
+        - label: Contact Us form
+        - label: Devotional medium promos
+        - label: Dropdown menus
+        - label: Flipcard lists and promos
+        - label: Frontend authentication
+        - label: Heading titles
+        - label: Library Databases
+        - label: Rich text editor functionality
+        - label: Rich text modules (images and videos)
+        - label: Search filters and pagination
+        - label: Tabs
+        - label: Video leads
