@@ -1,0 +1,46 @@
+name: QA Sign-off
+description: Confirm QA completion for this PR.
+title: "QA Sign-off – <PR_TITLE>"
+labels: qa
+type: qa
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        By completing this form, you confirm that QA has been fully completed for this PR. This issue must be linked to the corresponding QA Plan as a child issue.
+
+  - type: checkboxes
+    id: tasks
+    attributes:
+      label: "Completed Tasks"
+      description: "I confirm that:"
+      options:
+        - label: Code formatting adheres to Brightspot standards with no formatting errors.
+          required: true
+        - label: No linting errors are present.
+          required: true
+        - label: All unit tests pass.
+          required: true
+        - label: All themes conform to the root style guide; any identified issues have been resolved, excluding documented exceptions.
+          required: true
+        - label: Extended functional testing has been completed in accordance with the PR QA Plan; all identified issues have been resolved and closed.
+          required: true
+        - label: Regression testing has been completed.
+          required: true
+        - label: Product owners have been notified of the changes and have approved deployment to production.
+          required: true
+
+  - type: checkboxes
+    id: cert
+    attributes:
+      label: Certification
+      description: This certification confirms that the QA process was followed.
+      options:
+        - label: I confirm that QA has been completed to the best of my knowledge in accordance with the PR QA Plan for the associated PR.
+          required: true
+
+#  - type: markdown
+#    attributes:
+#      value: |
+#        QA signoff submitted by {{USER}} on {{CREATED_AT}}.
