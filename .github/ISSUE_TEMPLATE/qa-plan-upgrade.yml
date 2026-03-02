@@ -8,7 +8,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Use this form to create a QA Plan for major code changes or Brightspot upgrades. QA Plans define the scope of testing and provide a structured way to track QA progress.
+        Use this form to create a QA Plan for major code changes or upgrades. QA Plans define the scope of testing and provide a structured way to track QA progress.
 
   - type: checkboxes
     id: pre-tasks
