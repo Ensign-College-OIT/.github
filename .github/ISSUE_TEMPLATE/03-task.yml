@@ -53,7 +53,7 @@ body:
         - P2 – Medium
         - P3 – Low
 
-  - type: input
+  - type: textarea
     id: owner
     attributes:
       label: Owner (team/person)
