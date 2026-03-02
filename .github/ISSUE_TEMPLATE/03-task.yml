@@ -53,13 +53,6 @@ body:
         - P2 – Medium
         - P3 – Low
 
-  - type: textarea
-    id: owner
-    attributes:
-      label: Owner (team/person)
-      description: Who is responsible for delivering this task
-      placeholder: "@frontend-team or alice"
-
   - type: input
     id: due-date
     attributes:
