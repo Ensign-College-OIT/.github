@@ -1,4 +1,4 @@
-name: QA Plan for Upgrades
+name: QA Plan for Brightspot Upgrades
 description: Create a QA plan for major upgrades or code changes.
 title: "QA Plan – <PR_TITLE>"
 labels: qa
