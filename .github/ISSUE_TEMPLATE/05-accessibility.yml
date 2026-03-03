@@ -2,7 +2,6 @@ name: Accessibility Issue
 description: Report an accessibility issue or WCAG compliance issue.
 title: "[Accessibility]: <name of issue> "
 labels:
-  - accessibility
   - a11y
   - triage
 type:
