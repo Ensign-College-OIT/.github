@@ -63,7 +63,7 @@ body:
     attributes:
       value: |
         ---
-        The following fields are for issues found by Siteimprove.
+        ### The following fields are for issues found by Siteimprove.
 
   - type: dropdown
     id: conformance
@@ -95,7 +95,7 @@ body:
     attributes:
       value: |
         ---
-        The following fields are for issues reported by other means.
+        ### The following fields are for issues reported by other means.
 
   - type: input
     id: wcag_criterion
@@ -134,7 +134,7 @@ body:
     attributes:
       value: |
         ---
-        Other important information
+        ### Other important information
 
   - type: textarea
     id: screenshots_logs
