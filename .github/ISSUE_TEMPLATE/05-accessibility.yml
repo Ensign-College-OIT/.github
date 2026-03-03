@@ -127,8 +127,6 @@ body:
         1. Navigate to /checkout
         2. Tab through form fields
         3. Screen reader does not announce label
-    validations:
-      required: true
 
   - type: markdown
     attributes:
