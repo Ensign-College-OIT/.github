@@ -1,0 +1,154 @@
+name: Accessibility Issue
+description: Report an accessibility issue or WCAG compliance issue.
+title: "[Accessibility] "
+labels:
+  - accessibility
+  - a11y
+  - triage
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Accessibility Issue Report
+        
+        Use this for to report accessibility barriers affecting users. Provide reproducible details and include assistive technology, browser, and environment information when possible.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Issue Name
+      description: Short description of the accessibility issue.
+      placeholder: "Form input fields are not labeled for screen readers"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: source
+    attributes:
+      label: Source
+      description: Where the issue was reported
+      options:
+        - Siteimprove – Found through Siteimprove scan
+        - Asana Form – Reported via the Asana form
+        - Other – Came from another source. List in description.
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Detailed Description
+      description: Describe the accessibility barrier and its impact on users.
+      placeholder: |
+        The submit button has no accessible name.
+        Screen readers announce it as "button" with no context.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: Select the level of user impact.
+      options:
+        - Critical – Blocks core functionality for assistive technology users
+        - High – Major usability issue
+        - Medium – Partial accessibility degradation
+        - Low – Minor accessibility improvement
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        The following fields are for issues found by Siteimprove.
+
+  - type: dropdown
+    id: conformance
+    attributes:
+      label: Conformance
+      description: Accessibility Web Content Accessibility Guidelines (WCAG) and best practice categories. These correspond with the conformance categories in SiteImprove.
+      options:
+        - A – WCAG level A
+        - AA – WCAG level AA
+        - Aria – WAI-ARIA authoring practices
+        - S – Accessibility best practices
+
+  - type: dropdown
+    id: issue_type
+    attributes:
+      label: Issue Type
+      description: Categories that issues found by Siteimprove fall into
+      options:
+        - Standard – Issue was found via scans
+        - Potential Issues – Potential issue that needs further vetting
+
+  - type: input
+    id: siteimprove_url
+    attributes:
+      label: Siteimprove Issue Page URL
+      description: The URL that lists all of the pages affected by this issue.
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        The following fields are for issues reported by other means.
+
+  - type: input
+    id: wcag_criterion
+    attributes:
+      label: WCAG Success Criterion (if known)
+      description: Reference the specific WCAG success criterion (e.g., 1.3.1, 4.1.2).
+      placeholder: "4.1.2 Name, Role, Value"
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser
+      description: Browser and version used during testing.
+      placeholder: "Chrome 122, Firefox 123, Safari 17"
+
+  - type: input
+    id: operating_system
+    attributes:
+      label: Operating System
+      description: OS and version
+      placeholder: "Windows 11, macOS 14, iOS 17"
+
+  - type: textarea
+    id: steps_to_reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: Provide detailed reproduction steps.
+      placeholder: |
+        1. Navigate to /checkout
+        2. Tab through form fields
+        3. Screen reader does not announce label
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        Other important information
+
+  - type: textarea
+    id: screenshots_logs
+    attributes:
+      label: Screenshots / Logs / Recordings
+      description: Include screenshots, screen recordings, or accessibility audit logs if available.
+
+  - type: checkboxes
+    id: verification_checklist
+    attributes:
+      label: Verification Checklist (for resolution)
+      description: Complete before closing, depending on the type of issue.
+      options:
+        - label: Issue verified with keyboard navigation
+        - label: Verified with screen reader
+        - label: Verified across supported browsers
+        - label: Documentation updated (if applicable)
