@@ -4,8 +4,7 @@ title: "[Accessibility]: <name of issue> "
 labels:
   - a11y
   - triage
-type:
-  - task
+type: task
 
 body:
   - type: markdown
