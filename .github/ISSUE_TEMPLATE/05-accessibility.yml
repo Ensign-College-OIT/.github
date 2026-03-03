@@ -71,7 +71,6 @@ body:
       label: Conformance
       description: Accessibility Web Content Accessibility Guidelines (WCAG) and best practice categories. These correspond with the conformance categories in SiteImprove.
       options:
-        - None
         - A – WCAG level A
         - AA – WCAG level AA
         - Aria – WAI-ARIA authoring practices
@@ -83,7 +82,6 @@ body:
       label: Issue Type
       description: Categories that issues found by Siteimprove fall into
       options:
-        - None
         - Standard – Issue was found via scans
         - Potential Issues – Potential issue that needs further vetting
 
