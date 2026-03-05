@@ -56,6 +56,12 @@ body:
       placeholder: "e.g., Windows 11, Chrome 120"
 
   - type: textarea
+    id: urls
+    attributes:
+      label: Affected URL(s)
+      description: URL(s) of page(s) affected by this issue.
+
+  - type: textarea
     id: other
     attributes:
       label: Additional Information
