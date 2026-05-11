@@ -28,6 +28,8 @@ body:
           required: true
         - label: Regression testing has been completed.
           required: true
+        - label: Compiled PR reviewed and approved by required reviewers on UAT.
+          required: true
         - label: Product owners have been notified of the changes and have approved deployment to production.
           required: true
 
