@@ -42,34 +42,12 @@ body:
     validations:
       required: true
 
-  - type: dropdown
-    id: priority
-    attributes:
-      label: Priority
-      description: Priority for scheduling and triage
-      options:
-        - P0 – Urgent
-        - P1 – High
-        - P2 – Medium
-        - P3 – Low
-
   - type: input
     id: due-date
     attributes:
       label: Due Date
       description: Optional target date (YYYY-MM-DD) for delivery.
       placeholder: "2014-11-15"
-
-  - type: dropdown
-    id: estimate
-    attributes:
-      label: Effort Estimate
-      description: Rough size estimate to help with planning.
-      options:
-        - High
-        - Medium
-        - Low
-        - Need to scope
 
   - type: textarea
     id: dependencies
